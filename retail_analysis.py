@@ -28,8 +28,8 @@ revenue_by_category = df.groupby('Product Category')['Total Revenue'].sum()
 # Create the pie chart dispalaying total revenue by product category
 plt.figure(figsize=(10, 6))
 total_revenue = sum(revenue_by_category)
-plt.pie(revenue_by_category, labels=revenue_by_category.index, autopct=lambda val: absolute_value_rev(val, total_revenue), startangle=140)
-# Adding title
+total_revenue = sum(revenue_by_category)
+plt.pie(revenue_by_category, labels=revenue_by_category.index, autopct=lambda val: absolute_value_rev(val, total_revenue), startangle=140)# Adding title
 plt.title('Total Revenue by Product Category')
 # Equal aspect ratio ensures that pie is drawn as a circle.
 plt.axis('equal')
